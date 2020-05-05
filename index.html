@@ -1,450 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Bootstrap Example</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
-<style media="screen">
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-body {
-	   background-color: black;
-	   font-family: cursive;
-	   }
-	   
-div#banner { 
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       width: 100%; 
-	   height: 300px;
-	   background: linear-gradient(to bottom, rgba(0,0,0,0) 10%,
-              rgba(0,0,0,1)), url("https://images.pexels.com/photos/2541310/pexels-photo-2541310.jpeg?cs=srgb&dl=white-lantern-lot-2541310.jpg&fm=jpg") no-repeat;
-		background-size:cover;
-    	}	
-
-.side-img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    overflow: hidden;
-	border-radius: 25px;
-
-}
-
-@media only screen and (max-width: 1029px) {
-	   
-div#banner { 
-       width: 100%; 
-	   height: 200px;
-}
-
-}
-
-@media only screen and (max-width: 600px) {
-	   
-div#banner { 
-       width: 100%; 
-	   height: 200px;
-}
-
-}
-
-.glow {
-  flex: 0 0 120px;
-  font-size: 7vw;
-  color: #fff;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-	   
-.glow {
-
-font-size: 9vw;
-
-}
-
-}
-
-a:hover {
- text-decoration: none;
-}
-
-p.box-words {
-
-color: #B5D7F7;
-font-family: Georgia !important;
-
-}
-
-.top-portion {
-
-width: 100%;
-padding: 10px;
-border: solid white 2px;
-margin-left: 1vw;
-margin-right: 1vw;
-margin-top: 2vw;
-background-color: white;
-border-radius: 25px;
-
-}
-
-.note {
-
-font-family: Georgia;
-
-}
-
-.bottom-portion {
-
-padding: 40px;
-
-}
-
-.container-words {
-
-padding: 10px;
-
-}
-
-.container-img {
-
-padding: 10px
-
-}
-
-.navbar {
-background-color: #4076c2;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: white
-}
-
-ul.nav a:hover { 
-color: #B5D7F7 !important; 
-}
-
-
-#map {
-height: 25vh; 
-width: 100%;  
-}
-	   
-.example-pic {
-
-  border: 1px solid #ddd;
-  border-radius: .5rem;  
-  padding: .5rem; 
-  width: 25vw;
-  height: 25vh;  
-  object-fit: cover;
-  
-}
-
-.example-box {
-
-text-align: center;
-
-}
-
-.carousel{
-    background: #B5D7F7;
-    margin-top: 20px;
-}
-.carousel-item{
-    text-align: center;
-    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
-}
-
-.bs-example{
-	margin: 20px;
-}
-
-.cara {
-
-height: 60vh;
-width: 60vw;
-object-fit: cover;
-
-}
-
-h1 {
-
-font-family: Georgia;
-
-}
-
-h2 {
-
-font-family: Georgia;
-
-}
-
-</style>
-  
+    <title>Ristorante Con Fusion</title>
+ <!-- build:css css/main.css -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- bootstrap-socia -->
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+<!-- endbuild -->
 </head>
+
 <body>
-
-<div id="banner">
-<h1 class="glow">bhanrigh.github.io</h1>
-</div>
-	
-	
-<div class="container">
-	<div class="row">
-        <div class="col-xs-12 top-portion">
-		<p class="note">Dear Classmates from Web Design for Everybody Capstone,
-		<br>
-		<br>
-		Thank you for taking the time to review and help grade my capstone project. I have decided to draft up a small guide that highlights the various parts of my project where the rubic has been fulfilled. Hopefully this reduces your time spent grading and helps you give the grade you feel is fair.
-		<br>
-		<br> 
-		Thank you, 
-		<br>
-		<i>
-		M
-		</i>
-		<h1>
-		Rubic
-		</h1>
-		<p class="note">
-		<i>
-		Does the site validate?
-		</i>
-		Check this following link to see if there are any errors:
-		<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fbhanrigh.github.io%2F">
-		The W3C Markup Validation Service
-		</a>
-		<br>
-		<br>
-		<i>
-		Is the site responsive?
-		</i>
-		Please notice how when resizing the browser, there is no horizontal scrollbar at any point. The navigation bar switches to a collasped "hamburger" for smaller screens. All elements of the page adjust to fit the new dimensions. Take particular note of the images and how the layout changes between desktop and mobile sizes: 
-		<a href="https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Fbhanrigh.github.io">
-		Responsive Design Checker
-		</a>
-		<br>
-		<br>
-		<i>
-		Is the site well-styled?
-		</i>
-		This is up to you!
-		<br>
-		<i>
-		Are the images incorporated effectively?
-		</i>This is up to you!
-		<br>
-		<i>
-		Successfully demonstrated the ability to enhance their site?
-		</i>
-		This is up to you!
-		<br>
-		<br>
-		<h2>
-		Four Enhancements
-		</h2>
-		<p class="note">
-		<i>
-		Add custom JavaScript (e.g. incorporate dynamic content, use JS to perform verification, modify the DOM):
-		</i>
-		<br>
-		I have added at the lower right hand corner of the page a script that prints a live feed of the page dimensions. I found it actually useful during the creation of the page when doing responsiveness. You can see it in action by simply resizing the window. Note this is jQuery.
-		<br>
-		<br>
-		<div class="example-box">
-		<a href="https://i.ibb.co/MNZWr2Q/resize.png">
-		<img class="example-pic" alt="" src="https://i.ibb.co/MNZWr2Q/resize.png">
-		</a>
-		</div>
-		<br>
-		<br>
-		<p class="note">
-		<i>
-		Incorporate plugins (e.g. Google Calendar, a map, parallax, etc.) You will need to show what you did other than just copying code. Did you need to change any of the attributes? Change any of the links?:
-		</i>
-		<br>
-		<br>
-		<div id="map"></div>
-		<br>
-		<p class="note">
-		The plugin I chose is, obviously, Google Maps. Now there will be an error and you'll only see the "for development purposes only". This is because I have declined to pay for the service. As you can see, however, there are no other issues with the code or API key.
-		<br>
-		<br>
-		<div class="example-box">
-		<a href="https://i.ibb.co/jJbp4pw/issue.png">
-		<img class="example-pic" alt="" src="https://i.ibb.co/jJbp4pw/issue.png">
-		</a>
-		</div>
-		<br>
-		<br>
-		<p class="note">
-		<i>
-		Use a sticky footer to create a consistent look across different browser heights (we usually only consider widths…):
-		</i>
-		<br>
-		<br>
-		Bootstrap provides a wonderful navigation bar that can be stickied (or not). As you scroll down, you can see my footer is a stickied navigation bar. Resize the window to see that the navigation footer remains cosnistent in height compared to the layout.
-		<br>
-		<br>
-		<div class="example-box">
-		<a href="https://i.ibb.co/hLNwwyC/navbar.png">
-		<img class="example-pic" alt="" src="https://i.ibb.co/hLNwwyC/navbar.png">
-		</a>
-		</div>
-		<br>
-		<br>
-		<p class="note">
-		<i>
-		Include a Carousel for your images (don't forget to turn off the automatic start feature if you can!!):
-		</i>
-		<br>
-		<div class="bs-example">
-		
-    <div id="myCarousel" class="carousel slide">
-        <!-- Carousel indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for carousel items -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="cara" alt="" src="https://images.pexels.com/photos/3584430/pexels-photo-3584430.jpeg">
-            </div>
-            <div class="carousel-item">
-                <img class="cara" alt="" src="https://images.pexels.com/photos/3100835/pexels-photo-3100835.jpeg">
-            </div>
-            <div class="carousel-item">
-                <img class="cara" alt="" src="https://images.pexels.com/photos/3820994/pexels-photo-3820994.jpeg">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-inverse navbar-toggleable-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul>
+<!-- Week4 Assignment Task1 -->
+                <span class="navbar-text">
+                    <a id="login-Btn" role="button"><span class="fa fa-sign-in"></span>Login</a>
+                </span>            
             </div>
         </div>
-        <!-- Carousel controls -->
-        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
+    </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog"tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="content">
+        <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputPassword3">Password</label>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+                </div>
+            </div>
+        </div>
     </div>
-</div></div>
-    </div>
-	
-	<script>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
-    </script>
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function
-    -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv0GlC-Vr0ZtAatjHs_dhdcTdGyl0hPQQ&callback=initMap">
-    </script>
-	
 
-	
-    <div class="row">
-        <div class="col-md-6 col-sm-12 order-md-1 container-words">
-            <div><p class="box-words">Et eam dolorem mnesarchum reformidans, eum bonorum democritum ad. Eu tale suas alienum sed, ius te detracto oportere. Debet latine pri ad, cu mel melius voluptaria consectetuer. Ad tamquam dissentiet quo, eam eu hinc posse veritus, malis option dolorum ut usu.</div>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col col-md-6">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+<!-- Task-3 adding a block-sized button for reserve Table-->
+                <div class="col-auto align-self-center">
+                    <img src="img/logo.png" class="img-fluid">
+                </div>
+<!-- Week3 - Task 1-3 Build Modal and update button -->
+<!-- Week4 Assignment Task1 -->
+                <div class="col align-self-center">
+                    <a  role="button" 
+                        class="btn btn-sm btn-warning btn-block" 
+                        id="reserve-button">
+                        Reserve Table
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-sm-12 order-md-2 container-img">
-            <div><img class="side-img" alt="" src="https://images.pexels.com/photos/2885578/pexels-photo-2885578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
-        </div>
-        </div>
-        
-         <div class="row">
-        <div class="col-md-6 col-sm-12 order-md-4 container-words">
-            <div><p class="box-words">Et eam dolorem mnesarchum reformidans, eum bonorum democritum ad. Eu tale suas alienum sed, ius te detracto oportere. Debet latine pri ad, cu mel melius voluptaria consectetuer. Ad tamquam dissentiet quo, eam eu hinc posse veritus, malis option dolorum ut usu.</div>
-        </div>
-        <div class="col-md-6 col-sm-12 order-md-3 container-img">
-            <div><img class="side-img" alt="" src="https://images.pexels.com/photos/3805983/pexels-photo-3805983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
-        </div>
-        </div>
-        
-         <div class="row">
-        <div class="col-md-6 col-sm-12 order-md-5 container-words">
-            <div><p class="box-words">Et eam dolorem mnesarchum reformidans, eum bonorum democritum ad. Eu tale suas alienum sed, ius te detracto oportere. Debet latine pri ad, cu mel melius voluptaria consectetuer. Ad tamquam dissentiet quo, eam eu hinc posse veritus, malis option dolorum ut usu.</div>
-        </div>
-        <div class="col-md-6 col-sm-12 order-md-6 container-img">
-            <div><img class="side-img" alt="" src="https://images.pexels.com/photos/3888557/pexels-photo-3888557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
-        </div>
-        </div>
-		<div class="row">
-		<div class="col-xs-12 bottom-portion"></div>
-		</div>
-</div>
-		
-<!-- NAV BAR -->
-<nav class="navbar navbar-expand-md navbar-dark justify-content-center fixed-bottom">
-<button class="navbar-toggler text-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon text-right"></span>
-</button>
-<div class="collapse navbar-collapse text-center" id="navbarCollapse">
-<ul class="navbar-nav mr-auto">
-<li class="nav-item">
-<a class="nav-link" href="#">Home</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="#">Websites</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="#">UI/UX</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="#">Links</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="#" style="">About</a>
-</ul>
-<ul class="nav navbar-nav navbar-right">
-<li class="nav-item">
-	
-	<div class="text-white-50">
-	Page Dimensions: <span id="dWidth"></span> x <span id="dHeight"></span>
-	</div>
-	<script>
-	$(window).resize(function() {
-	$("#dWidth").html($(window).width());
-	}).resize();
+    </header>
 
-	$(window).resize(function() {
-	$("#dHeight").html($(window).height());
-	}).resize();
-	</script>
-</li>
-</ul>
-</div>
-</nav>
-<!-- NAV BAR END-->
+    <div class="container">
+        <!-- week3 Exercise Carousel -->
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mycarousel" data-slide-to="1"></li>
+                    <li data-target="#mycarousel" data-slide-to="2"></li>
+                </ol>
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="carousel-item active">
+                            <div class="col">
+                                <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
+                            </div>
+                            <div class="col carousel-caption d-none d-md-block align-self-center">
+                                <h2>Uthappizza <span class="badge badge-danger">HOT</span>
+                                <span class="badge badge-pill badge-default">$4.99</span></h2>
+                                <p class="hidden-xs-down">A unique combination of Indian Uthappam (pancake) and
+                                        Italian pizza, topped with Cerignola olives, ripe vine
+                                        cherry tomatoes, Vidalia onion, Guntur chillies and
+                                        Buffalo Paneer.
+                                </p>
+                            </div>
+                        </div>
+
+                            <div class="carousel-item">
+                                <div class="col">
+                                    <img class="d-block img-fluid" src="img/buffet.png" alt="Buffet Month">
+                                </div>
+                                <div class="col carousel-caption d-none d-md-block align-self-center">
+                                    <h2> <span class="badge badge-danger"> NEW </span> Weekend Grand Buffet</h2>
+                                    <p class="hidden-xs-down">Featuring mouthwatering combinations with a choice of five different salads, 
+                                        six enticing appetizers, six main entrees and five choicest desserts. 
+                                        Free flowing bubbly and soft drinks. All for just $19.99 per person 
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col">
+                                    <img class="d-block img-fluid" src="img/alberto.png" alt="alberto">
+                                </div>
+                                <div class="col carousel-caption d-none d-md-block align-self-center">
+                                    <h2>Alberto Somayya</h2>
+                                    <h4>Executive Chef</h4>
+                                    <p class="hidden-xs-down">Award winning three-star Michelin chef with wide
+                                        International experience having worked closely with
+                                        whos-who in the culinary world, he specializes in
+                                        creating mouthwatering Indo-Italian fusion experiences.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                        <button class="btn btn-danger btn-sm" id="carousel-button">
+                            <span id="carousel-button-icon" class="fa fa-pause"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <div class="row row-content align-items-center">
+            <div class="col-sm col-md flex-last">
+                <h3>Our Lipsmacking Culinary Creations</h3>
+            </div>
+            <div class="media">
+                <img class="mr-3 img-thumbnail align-self-center flex-first" src="img/uthappizza.png" alt="Uthappizza">
+            </div>
+            <div class="media-body col-6">
+                <h2 class="mt-0"><span class="badge badge-danger"> HOT </span> Uthappizza <span class="badge badge-pill badge-default">$4.99</span></h2>
+                <p class="hidden-xs-down">
+                    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Click here to read more</a>
+                </p>
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                        <p class="hidden-xs-down">A unique combination of Indian Uthappam (pancake) and
+                                Italian pizza, topped with Cerignola olives, ripe vine
+                                cherry tomatoes, Vidalia onion, Guntur chillies and
+                                Buffalo Paneer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Week-2 Task 2 - formatting the content in the second row of the page -->
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3 flex-first">
+                <h3>This Month's Promotions</h3>
+            </div>
+            <div class="media-body col-6">
+                <h2> <span class="badge badge-danger"> NEW </span> Weekend Grand Buffet</h2>
+                <p class="hidden-xs-down">Featuring mouthwatering combinations with a choice of five different salads, 
+                    six enticing appetizers, six main entrees and five choicest desserts. 
+                    Free flowing bubbly and soft drinks. All for just $19.99 per person 
+                </p>
+            </div>
+            <div class="media flex-last">
+                <img class="d-flex img-thumbnail align-self-center flex-last" src="img/buffet.png" alt="Buffet Month">
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3 flex-last">
+                <h3>Meet our Culinary Specialists</h3>
+            </div>
+            <div class="media">
+                <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="Alberto Somayya">
+            </div>
+            <div class="media-body">
+                <h2 class="mt-0">Alberto Somayya</h2>
+                <h4>Executive Chef</h4>
+                <p class="hidden-xs-down">Award winning three-star Michelin chef with wide
+                    International experience having worked closely with
+                    whos-who in the culinary world, he specializes in
+                    creating mouthwatering Indo-Italian fusion experiences.
+                </p>
+            </div>
+        </div>
+    <!-- Week-2 Task 1 -->
+<!-- week-3 Task 1 --> <!-- reserveTable -->
+        <div class="modal fade" id="reserveModal" tabindex="-1" role="dialog" aria-labelledby="reserveModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"> Reserve a Table </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                        <div class="form-group">
+<!-- Table Guess Count -->  <div class="input-group row">
+                                <div class="col-auto ml-3">
+                                    <span class="input-group-text" id="">Number of Guests</span>
+                                </div>
+                                <div class="col-12 col-sm pb-3">
+                                    <label class="radio-inline"><input type="radio" name="optradio"> 1</label>
+                                    <label class="radio-inline"><input type="radio" name="optradio"> 2</label>
+                                    <label class="radio-inline"><input type="radio" name="optradio"> 3</label>
+                                    <label class="radio-inline"><input type="radio" name="optradio"> 4</label>
+                                    <label class="radio-inline"><input type="radio" name="optradio"> 5</label>
+                                    <label class="radio-inline"><input type="radio" name="optradio"> 6</label>
+                                </div>
+                            </div> <!-- End count -->
+<!-- Table Smoking W3T2 --> <div class="input-group row">
+                                <div class="col-auto col-4 ml-3">
+                                    <span class="input-group-text" id="">Section </span>
+                                </div>
+                                <div class="btn-group col-sm-4 pb-3" data-toggle="buttons">
+                                    <label class="btn btn-primary active">
+                                        <input type="radio" name="options" id="optionNonSmoking" autocomplete="off"> Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="options" id="optionSmoking" autocomplete="off"> Smoking
+                                    </label>
+                                </div>
+                            </div> <!-- End Smoking -->
+        <!-- Table Time --> <div class='input-group date row pb-3'>
+                                    <div class="col-auto ml-3">
+                                        <span class="input-group-text" id="">Date and Time</span>
+                                    </div>      
+                                    <div class="col-12 col-sm">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="input-group">
+                                                    <input type='date' class="form-control" />
+                                                    <span class="input-group-addon">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                    </span> 
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="input-group">
+                                                    <input type='time' class="form-control" name="time"/>
+                                                    <span class="input-group-addon">
+                                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- End Table Time --> 
+                            </div> <!-- End form group -->
+                        </div> <!--End Card Body -->
+                    </div> <!-- End Modal Body -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Reserve Table</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div> <!-- End modal-content -->
+            </div> <!-- End modal-dialog -->
+        </div> <!-- End Modal --><!-- End ID reserveTable -->
+    </div> <!-- End container -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-5 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                        121, Clear Water Bay Road
+                        <br> Clear Water Bay, Kowloon
+                        <br> HONG KONG
+                        <br>
+                        <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                        <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                        <i class="fa fa-envelope fa-lg"></i>: 
+                        <a href="mailto:confusion@food.net">confusion@food.net</a>
+                    </address>
+                </div>
+                <div class="col col-sm-4 align-self-center">
+                    <div style="text-align:center">
+                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-cente">             
+                <div class="col-auto">
+                    <p>© Copyright 2015 Ristorante Con Fusion</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<!-- build:js js/main.js -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+<!-- endbuild --> 
 </body>
+
 </html>
